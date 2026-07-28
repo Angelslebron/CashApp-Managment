@@ -43,18 +43,18 @@ Las funcionalidades de CashApp son:
 
 
 ## Tecnologías utilizadas
-|Tecnologias|
-|![Python](https://img.shields.io/badge/python-3670A0style=for-the-badge&logo=python&logoColor=ffdd54) |
-|![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)|
-|![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-%23D71F00.svg?style=for-the-badge&logo=sqlalchemy&logoColor=white) |
-|![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) |
-|![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) |
-|![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
-|![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green) |
-|![SQLITE](https://img.shields.io/badge/FastAPI-005571.svg?style=for-the-badge&logo=fastapi) |
-|![Scikit-learn-discovery-badge](https://images.credly.com/size/340x340/images/e3f72503-68fe-47d7-9766-c85a24932e89/blob) |
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-%23D71F00.svg?style=for-the-badge&logo=sqlalchemy&logoColor=white) 
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) 
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) 
+![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green) 
+![SQLITE](https://img.shields.io/badge/FastAPI-005571.svg?style=for-the-badge&logo=fastapi) 
+![Scikit-learn-discovery-badge](https://images.credly.com/size/340x340/images/e3f72503-68fe-47d7-9766-c85a24932e89/blob) 
 ---
 
-Creator[^bignote]
+CashApp[^bignote]
 ---
 [^bignote]: Created by Angel Duarte Montero Lebrón - BackEnd Developer
