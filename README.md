@@ -5,6 +5,12 @@ Debido a esto, existe este proyecto, el cual busca **combinar AI, machine learni
 
 Este monto debe ser ingresado a la plataforma, al cual se le puede insertar y restar cantidades que hayan sido movidas por el cliente. Este mini proyecto es una pequeña implementación de un futuro proyecto bancario, el cual consumirá este proyecto como su dashboard.
 
+## Arquitectura
+
+Backend FastAPI
+Cliente Tkinter
+Base de datos SQLite
+
 ## Funcionalidades
 Las funcionalidades de CashApp son:
 - Registrar ingresos.
