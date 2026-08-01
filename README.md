@@ -7,9 +7,41 @@ Este monto debe ser ingresado a la plataforma, al cual se le puede insertar y re
 
 ## Arquitectura
 
-Backend FastAPI
-Cliente Tkinter
-Base de datos SQLite
+- Backend FastAPI
+- Cliente Tkinter
+- Base de datos SQLite
+  
+El proyecto está dividido en dos componentes independientes que se comunican vía HTTP:
+
+┌─────────────────────┐        HTTP/REST        ┌──────────────────────┐
+│   Cliente Tkinter    │  ───────────────────▶   │     API FastAPI       │
+│  (desktop/)           │  ◀───────────────────   │     (api/)             │
+└─────────────────────┘                          └──────────┬───────────┘
+                                                              │
+                                                              ▼
+                                                    ┌──────────────────┐
+                                                    │  SQLite (SQLAlchemy) │
+                                                    └──────────────────┘
+
+## Estructura
+CashApp-Managment/
+├── api/                          # Backend FastAPI
+│   ├── main.py                   # Punto de entrada de la API
+│   ├── database.py               # Configuración de SQLAlchemy / SQLite
+│   ├── models/                   # Modelos ORM
+│   ├── schemas/                  # Esquemas de validación (Pydantic)
+│   ├── routers/                  # Endpoints (movements, prediction)
+│   ├── services/                 # Lógica de negocio
+│   └── ai/                       # Clasificador de Machine Learning
+│       ├── train_model.py        # Script de entrenamiento
+│       ├── classifier.py         # Carga del modelo y predicción
+│       └── movement_model.pkl    # Modelo entrenado
+├── desktop/                      # Cliente de escritorio (Tkinter)
+│   ├── app.py                    # Punto de entrada de la app
+│   ├── controllers/               # Consumo de la API (requests)
+│   └── views/                    # Interfaz gráfica (Dashboard)
+├── requirements.txt
+└── README.md
 
 ## Funcionalidades
 Las funcionalidades de CashApp son:
