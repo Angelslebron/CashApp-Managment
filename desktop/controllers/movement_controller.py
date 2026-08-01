@@ -5,6 +5,8 @@ class MovementController:
 
     BASE_URL = "http://127.0.0.1:8000/movements"
 
+    
+
     def get_movements(self):
         response = requests.get(self.BASE_URL)
 
@@ -67,3 +69,17 @@ class MovementController:
         response.raise_for_status()
 
         return response.json()
+
+    def predict_category(self, description):
+
+            response = requests.post(
+                "http://127.0.0.1:8000/prediction/predict-category",
+                json={
+                    "description": description
+                }
+            )
+
+            response.raise_for_status()
+
+            return response.json()["category"]
+      

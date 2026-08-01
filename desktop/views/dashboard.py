@@ -1,8 +1,11 @@
 import tkinter as tk
-from tkinter import messagebox, ttk
+
+from tkinter import ttk
+from tkinter import messagebox
+
+import requests
 
 from desktop.controllers.movement_controller import MovementController
-
 
 class Dashboard:
 
@@ -13,19 +16,19 @@ class Dashboard:
 
         self.controller = MovementController()
 
+        self.summary_frame = ttk.LabelFrame(
+            self.root,
+            text="Financial Summary"
+        )
+
+        self.summary_frame.pack(
+            fill="x",
+            padx=20,
+            pady=10
+        )
+
         self.create_widgets()
         self.load_movements()
-
-        self.summary_frame = ttk.LabelFrame(
-    self.root,
-    text="Financial Summary"
-)
-
-    self.summary_frame.pack(
-        fill="x",
-        padx=20,
-        pady=10
-    )
 
     def create_widgets(self):
 
@@ -72,6 +75,11 @@ class Dashboard:
             column=3,
             padx=5,
             pady=5
+        )
+
+        self.description_entry.bind(
+            "<FocusOut>",
+            self.auto_predict_category
         )
 
         ttk.Label(
@@ -352,3 +360,29 @@ class Dashboard:
         self.category_entry.delete(0, tk.END)
 
         self.type_combo.set("INCOME")
+
+    def auto_predict_category(self, event):
+
+        description = self.description_entry.get().strip()
+
+        if description == "":
+            return
+
+        try:
+
+            category = self.controller.predict_category(
+                description
+            )
+
+            self.category_entry.delete(
+                0,
+                tk.END
+            )
+
+            self.category_entry.insert(
+                0,
+                category
+            )
+
+        except Exception:
+            pass
